@@ -29,7 +29,7 @@ gulp.task('jade', function() {
 		.pipe(jade({
 			pretty: true
 		}))
-		.pipe(gulp.dest('../ff78'));
+		.pipe(gulp.dest('.'));
 
 	gulp.src('jade/portfolio/*.jade') // Jade
 		.pipe(jade({
