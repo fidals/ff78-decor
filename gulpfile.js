@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var imageResize = require('gulp-image-resize');
 var watermark = require("gulp-watermark");
+var jade = require('gulp-jade')
 
 gulp.task('imageProcessing', function () {
 	gulp.src('img/portfolio/scr-images/*/*.{jpg,JPG}')//resize big images to small
@@ -22,3 +23,18 @@ gulp.task('imageProcessing', function () {
 		.pipe(gulp.dest('img/portfolio/main')
 	);
 });
+
+gulp.task('jade', function() {
+	gulp.src(['jade/*.jade', '!jade/_*.jade']) // Jade
+		.pipe(jade({
+			pretty: true
+		}))
+		.pipe(gulp.dest('../ff78'));
+
+	gulp.src('jade/portfolio/*.jade') // Jade
+		.pipe(jade({
+			pretty: true
+		}))
+		.pipe(gulp.dest('portfolio'));
+});
+

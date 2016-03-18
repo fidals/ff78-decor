@@ -71,7 +71,7 @@ header .contacts {
 	width: 25px;
 }
 
-.icon-instagram {
+.icon-vk {
 	background-position: -25px 0;
 }
 
@@ -324,6 +324,33 @@ span.opacity{
 }
 /*price*/
 
+/*faq*/
+.question {
+	font-weight: 600;
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+
+.question-content {
+	padding: 0 10px;
+}
+
+.faq-block {
+	padding: 27px 10px;
+	border-top:1px solid rgba(171, 83, 176, 0.7);
+}
+
+.faq-block:last-child {
+	border-bottom:1px solid rgba(171, 83, 176, 0.7);
+}
+
+.call-us {
+	border-top:1px solid rgba(171, 83, 176, 0.7);
+	text-align: center;
+	padding: 27px 0 5px;
+}
+/*/faq*/
+
 /*footer*/
 .footer-block {
 	background-color: rgba(137, 131, 138, 0.2);
@@ -350,7 +377,6 @@ span.opacity{
 	margin: 5px;
 }
 /*/footer*/
-
 
 
 /*@media*/

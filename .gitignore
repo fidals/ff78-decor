@@ -15,6 +15,9 @@ $RECYCLE.BIN/
 *.msp
 *.sass-cache
 *.map
+*.html
+
+portfolio
 img/portfolio/main
 img/portfolio/mini
 node_modules
