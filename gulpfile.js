@@ -38,3 +38,10 @@ gulp.task('jade', function() {
 		.pipe(gulp.dest('portfolio'));
 });
 
+//gulp.task('watch', function () {
+//	server.listen(35729, function (err) {
+//
+//	gulp.watch('jade/*/*.jade', ['jade']);
+//
+//	});
+

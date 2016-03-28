@@ -63,6 +63,7 @@ header .contacts {
 	margin-right: 10px;
 }
 /*-----------------------------------------*/
+
 .social-icon {
 	background: url(../img/spritesheet.png) no-repeat;
 	display: inline-block; /*back display:block when get button.callback*/
@@ -335,7 +336,9 @@ span.opacity{
 	padding: 0 10px;
 }
 
-.faq-block {
+.faq-block, .review-block {
+	clear: both;
+	overflow: hidden;
 	padding: 27px 10px;
 	border-top:1px solid rgba(171, 83, 176, 0.7);
 }
@@ -350,6 +353,22 @@ span.opacity{
 	padding: 27px 0 5px;
 }
 /*/faq*/
+
+/*review*/
+.review-img {
+	float: left;
+	margin: 5px 15px 15px 0;
+}
+
+p.author {
+	color: rgba(171, 83, 176, 1);
+	font-size: 18px;
+	font-weight: 500;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+/*review*/
 
 /*footer*/
 .footer-block {
