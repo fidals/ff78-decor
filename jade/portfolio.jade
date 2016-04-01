@@ -5,22 +5,32 @@ block title
 block content
 	+breadcrumb('Портфолио')
 	.content
-		.row.portfolio-preview
-			+portfolioPage ('portfolio/anna-leonid.html', 'img/portfolio/mini/anna-leonid/1.jpg', 'Анна и Леонид')
-			+portfolioPage ('portfolio/byket-kristiny.html', 'img/portfolio/mini/byket-kristiny/1.jpg', 'Букет и венок на голову для Кристины')
-			+portfolioPage ('portfolio/klassik-beliy-cvet.html', 'img/portfolio/mini/klassik-beliy-cvet/1.jpg', 'В классическом белом цвете')
-			+portfolioPage ('portfolio/morskoy-stil.html', 'img/portfolio/mini/morskoy-stil/2.jpg', 'В морском стиле')
-			+portfolioPage ('portfolio/negno-rozoviy.html', 'img/portfolio/mini/negno-rozoviy/2.jpg', 'В нежно-розовом цвете')
-			+portfolioPage ('portfolio/negno-fioletoviy.html', 'img/portfolio/mini/negno-fioletoviy/1.jpg', 'В нежно-фиолетовом цвете')
-			+portfolioPage ('portfolio/tiffany.html', 'img/portfolio/mini/tiffany/1.jpg', 'В стиле тифани')
-			+portfolioPage ('portfolio/persikoviy.html', 'img/portfolio/mini/persikoviy/1.jpg', 'В персиковом цвете')
-			+portfolioPage ('portfolio/victoriya-mark.html', 'img/portfolio/mini/victoriya-mark/2.jpg', 'Виктория и Марк')
-			+portfolioPage ('portfolio/victoriya-maksim.html', 'img/portfolio/mini/victoriya-maksim/1.jpg', 'Виктория и Максим')
-			+portfolioPage ('portfolio/ekaterina-anatoliy.html', 'img/portfolio/mini/ekaterina-anatoliy/1.jpg', 'Екатерина и Анатолий')
-			+portfolioPage ('portfolio/promoakciya-dior.html', 'img/portfolio/mini/promoakciya-dior/1.jpg', 'Промоакция от Dior')
-			+portfolioPage ('portfolio/ksusha-andrey.html', 'img/portfolio/mini/ksusha-andrey/2.jpg', 'Ксюша и Андрей')
-			+portfolioPage ('portfolio/fioletoviy-glamur.html', 'img/portfolio/mini/fioletoviy-glamur/1.jpg', 'Фиолетовый гламур')
-			+portfolioPage ('portfolio/staraya-melnica.html', 'img/portfolio/mini/staraya-melnica/4.jpg', 'Фотосессия в Старой мельнице')
-			+portfolioPage ('portfolio/nataliya-roman.html', 'img/portfolio/mini/nataliya-roman/1.jpg', 'Классическая свадьба Натальи и Романа')
-			+portfolioPage ('portfolio/katerina-marat.html', 'img/portfolio/mini/katerina-marat/4.jpg', 'Свадьба Катерины и Марата в цвете марсала')
-			+portfolioPage ('portfolio/byket-nevest.html', 'img/portfolio/mini/byket-nevest/4.jpg', 'Букеты невест')
+		.row
+			h2.portfolio-h2 Декор и флористика
+			.portfolio-preview
+				+portfolioPage ('portfolio/morskoy-stil.html', 'img/portfolio/mini/morskoy-stil/2.jpg', 'В морском стиле')
+				+portfolioPage ('portfolio/negno-rozoviy.html', 'img/portfolio/mini/negno-rozoviy/2.jpg', 'В нежно-розовом цвете')
+				+portfolioPage ('portfolio/negno-fioletoviy.html', 'img/portfolio/mini/negno-fioletoviy/1.jpg', 'В нежно-фиолетовом цвете')
+				+portfolioPage ('portfolio/tiffany.html', 'img/portfolio/mini/tiffany/1.jpg', 'В стиле тифани')
+				+portfolioPage ('portfolio/persikoviy.html', 'img/portfolio/mini/persikoviy/1.jpg', 'В персиковом цвете')
+				+portfolioPage ('portfolio/victoriya-mark.html', 'img/portfolio/mini/victoriya-mark/2.jpg', 'Виктория и Марк')
+				+portfolioPage ('portfolio/ksusha-andrey.html', 'img/portfolio/mini/ksusha-andrey/2.jpg', 'Ксюша и Андрей')
+				+portfolioPage ('portfolio/fioletoviy-glamur.html', 'img/portfolio/mini/fioletoviy-glamur/1.jpg', 'Фиолетовый гламур')
+				+portfolioPage ('portfolio/staraya-melnica.html', 'img/portfolio/mini/staraya-melnica/4.jpg', 'Фотосессия в Старой мельнице')
+				+portfolioPage ('portfolio/nataliya-roman.html', 'img/portfolio/mini/nataliya-roman/1.jpg', 'Классическая свадьба Натальи и Романа')
+				+portfolioPage ('portfolio/katerina-marat.html', 'img/portfolio/mini/katerina-marat/4.jpg', 'Свадьба Катерины и Марата в цвете марсала')
+				+portfolioPage ('portfolio/klassik-beliy-cvet.html', 'img/portfolio/mini/klassik-beliy-cvet/1.jpg', 'В классическом белом цвете')
+		.row
+			h2.portfolio-h2 Флористика
+			.portfolio-preview
+				+portfolioPage ('portfolio/anna-leonid.html', 'img/portfolio/mini/anna-leonid/1.jpg', 'Анна и Леонид')
+				+portfolioPage ('portfolio/victoriya-maksim.html', 'img/portfolio/mini/victoriya-maksim/1.jpg', 'Виктория и Максим')
+				+portfolioPage ('portfolio/ekaterina-anatoliy.html', 'img/portfolio/mini/ekaterina-anatoliy/1.jpg', 'Екатерина и Анатолий')
+				+portfolioPage ('portfolio/promoakciya-dior.html', 'img/portfolio/mini/promoakciya-dior/1.jpg', 'Промоакция от Dior')
+				+portfolioPage ('portfolio/byket-nevest.html', 'img/portfolio/mini/byket-nevest/4.jpg', 'Букеты невест')
+				+portfolioPage ('portfolio/byket-kristiny.html', 'img/portfolio/mini/byket-kristiny/1.jpg', 'Букет и венок на голову для Кристины')
+		.row
+			h2.portfolio-h2 Видео
+			.portfolio-preview
+				.video
+					iframe(width='560', height='315', src='https://www.youtube.com/embed/jc5oz2iJM0w', frameborder='0', allowfullscreen='')

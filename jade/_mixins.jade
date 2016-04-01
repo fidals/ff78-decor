@@ -18,8 +18,8 @@ mixin portfolioPage(href, scr, name)
 	.col-md-4.col-sm-6.portfolio-item
 		a(href=href)
 			img.img-responsive.img-portfolio(src=scr)
-		h2
-			a.h2-link(href=href)=name
+			h3.h3-caption-foto
+				a(href=href)=name
 
 mixin portfolioItem(href, scr)
 	.col-md-4.col-sm-6.portfolio-item

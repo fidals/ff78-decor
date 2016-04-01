@@ -13,17 +13,19 @@ body {
 }
 
 h1 {
+	font-size: 30px;
 	margin: 10px 0 30px;
 	text-align: center;
 }
 
 h2 {
-	font-size: 18px;
+	font-size: 22px;
 	font-weight: 500;
+	margin: 0 0 30px;
 	text-align: center;
 }
 
-.content .portfolio-item a.h2-link {
+a.h2-link {
 	font-size: 20px;
 }
 
@@ -88,9 +90,9 @@ header .contacts {
 	max-height: 50px;
 	max-width: 140px;
 	padding: 0 10px;
-	text-transform: uppercase;
 	text-decoration: none;
 	text-shadow: 0 1px 0 #3d768a;
+	text-transform: uppercase;
 	vertical-align: top;
 }
 
@@ -113,8 +115,8 @@ header .contacts {
 
 .callback span {
 	display: inline-block;
-	text-align: center;
 	margin-top: 5px;
+	text-align: center;
 	vertical-align: top;
 	width: 68px;
 }
@@ -163,15 +165,15 @@ ul.dropdown-submenu li a {
 
 .foto-preview {
 	border-radius: 7%;
-	overflow: hidden;
 	margin: 0 auto;
 	max-height: 250px;
 	max-width: 270px;
+	overflow: hidden;
 }
 
 .recent-content {
-	min-height: 40px;
 	line-height: 18px;
+	min-height: 40px;
 	padding: 1px 0 0 0;
 }
 
@@ -184,7 +186,7 @@ ul.dropdown-submenu li a {
 	text-align: center;
 }
 
-.phone:visited, .phone:hover, .h2-link:hover {
+.phone:visited, .phone:hover, .h2-link:hover, .h3-caption-foto a:hover {
 	color: #BA55B3;
 	text-decoration: none;
 }
@@ -212,8 +214,8 @@ ul.dropdown-submenu li a {
 }
 
 .reasons li {
-	font-size: 16px;
 	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
 	padding: 5px 0;
 }
 
@@ -250,15 +252,15 @@ ul.dropdown-submenu li a {
 	margin: 0 5px 0;
 	padding-top: 10px;
 	text-align: center;
-	width: 36px;
 	vertical-align: middle;
+	width: 36px;
 }
 
-span.color {
+.color {
 	color: #BA55B3;
 }
 
-span.opacity{
+.opacity{
 	opacity: 0;
 }
 
@@ -268,24 +270,31 @@ span.opacity{
 }
 
 .contacts-page-link:hover {
-	text-decoration: none;
 	color: #BA55B3;
+	text-decoration: none;
 }
 
 .contacts-page {
 	border-bottom: 1px solid #BA55B3;
 	border-top:1px solid #BA55B3;
-	padding: 25px 30px;
 	margin: 25px 0 295px;
+	padding: 25px 30px;
 }
 /*contacts*/
 
 /*portfolio*/
 .portfolio-preview {
-	padding: 0 0 10px;
+	padding: 40px 0 8px;
+	overflow: hidden;
+}
+
+.video {
+	margin: 0 auto;
+	max-width: 560px;
 }
 
 .img-portfolio {
+	border-radius: 7%;
 	max-height: 175px;
 }
 
@@ -295,12 +304,26 @@ span.opacity{
 
 .custom-breadcrumb {
 	background: none;
-	margin: 10px 0 0 20px;
 	font-size: 14px;
+	margin: 10px 0 0 20px;
 }
 
 .portfolio-mini-photo {
 	max-height: 180px;
+}
+
+.portfolio-h2 {
+	border-top: 1px solid #BA55B3;
+	border-bottom: 1px solid #BA55B3;
+	font-size: 24px;
+	margin: 0;
+	padding: 30px 0;
+}
+
+.h3-caption-foto {
+	font-size: 20px;
+	margin: 15px 0 10px;
+	text-align: center;
 }
 /*/portfolio*/
 
@@ -312,8 +335,8 @@ span.opacity{
 
 .list-price {
 	border-bottom: 1px solid #ab53b0;
-	text-align: left;
 	padding: 15px 0;
+	text-align: left;
 }
 
 .list-price li{
@@ -327,8 +350,8 @@ span.opacity{
 
 /*faq*/
 .question {
-	font-weight: 600;
 	font-size: 18px;
+	font-weight: 600;
 	letter-spacing: 1px;
 }
 
@@ -337,10 +360,10 @@ span.opacity{
 }
 
 .faq-block, .review-block {
+	border-top:1px solid rgba(171, 83, 176, 0.7);
 	clear: both;
 	overflow: hidden;
 	padding: 27px 10px;
-	border-top:1px solid rgba(171, 83, 176, 0.7);
 }
 
 .faq-block:last-child {
@@ -349,8 +372,8 @@ span.opacity{
 
 .call-us {
 	border-top:1px solid rgba(171, 83, 176, 0.7);
-	text-align: center;
 	padding: 27px 0 5px;
+	text-align: center;
 }
 /*/faq*/
 
@@ -360,7 +383,7 @@ span.opacity{
 	margin: 5px 15px 15px 0;
 }
 
-p.author {
+.author {
 	color: rgba(171, 83, 176, 1);
 	font-size: 18px;
 	font-weight: 500;
@@ -375,8 +398,8 @@ p.author {
 	background-color: rgba(137, 131, 138, 0.2);
 	border-top: 1px solid #BA55B3;
 	min-height: 50px;
-	text-align: center;
 	padding: 10px 20px 10px;
+	text-align: center;
 }
 
 .social-links-footer {
@@ -421,10 +444,6 @@ p.author {
 		font-size: 22px;
 	}
 
-	h1 {
-		font-size: 25px;
-	}
-
 	.foto-preview, .img-portfolio, .contacts-social-icon {
 		margin: 0 auto;
 	}
@@ -438,19 +457,15 @@ p.author {
 		margin: 0 auto 20px;
 	}
 
-	header.header .contacts {
+	.header .contacts {
 		padding: 10px 0;
-	}
-
-	h2 {
-		text-align: center;
 	}
 
 	.button-social {
 		clear: both;
-		overflow: hidden;
 		margin: 0 auto;
 		max-width: 170px;
+		overflow: hidden;
 	}
 
 	.callback {
@@ -458,8 +473,8 @@ p.author {
 	}
 
 	.contacts-page {
-		padding: 15px 0;
 		margin: 10px 0;
+		padding: 15px 0;
 	}
 }
 
