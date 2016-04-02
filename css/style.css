@@ -325,6 +325,29 @@ ul.dropdown-submenu li a {
 	margin: 15px 0 10px;
 	text-align: center;
 }
+
+.button-more-link {
+	background-color: #ffffff;
+	border-radius: 8px;
+	border: 2px solid #3379b7;
+	display: inline-block;
+	cursor: pointer;
+	color: #3379b7;
+	font-size: 16px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #f7f9fa;
+	padding: 5px 13px;
+}
+.button-more {
+	margin: 0 auto 20px;
+	text-align: center;
+}
+
+.button-more-link:hover {
+	border: 2px solid #BA55B3;
+	color: #BA55B3;
+	text-decoration: none;
+}
 /*/portfolio*/
 
 /*price*/
@@ -340,7 +363,8 @@ ul.dropdown-submenu li a {
 }
 
 .list-price li{
-	padding-bottom: 10px;
+	padding-bott
+	om: 10px;
 }
 
 .list-price i {
@@ -380,7 +404,7 @@ ul.dropdown-submenu li a {
 /*review*/
 .review-img {
 	float: left;
-	margin: 5px 15px 15px 0;
+	margin: 5px 30px 15px 0;
 }
 
 .author {

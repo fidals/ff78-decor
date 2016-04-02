@@ -21,6 +21,9 @@ block content
 				+portfolioPage ('portfolio/katerina-marat.html', 'img/portfolio/mini/katerina-marat/4.jpg', 'Свадьба Катерины и Марата в цвете марсала')
 				+portfolioPage ('portfolio/klassik-beliy-cvet.html', 'img/portfolio/mini/klassik-beliy-cvet/1.jpg', 'В классическом белом цвете')
 		.row
+			.button-more
+				a.button-more-link#buttonMore  Показать еще
+		.row
 			h2.portfolio-h2 Флористика
 			.portfolio-preview
 				+portfolioPage ('portfolio/anna-leonid.html', 'img/portfolio/mini/anna-leonid/1.jpg', 'Анна и Леонид')
@@ -34,3 +37,5 @@ block content
 			.portfolio-preview
 				.video
 					iframe(width='560', height='315', src='https://www.youtube.com/embed/jc5oz2iJM0w', frameborder='0', allowfullscreen='')
+block append script
+	script(src='/js/loadMore.js')
