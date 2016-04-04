@@ -3,7 +3,7 @@ mixin breadcrumb(text)
 		li
 			a(href='/index.html') Главная
 		li=text
-	h1.h1-port=text
+	h1=text
 
 mixin breadcrumbPortfolio(text)
 	ol.breadcrumb.custom-breadcrumb
@@ -12,7 +12,7 @@ mixin breadcrumbPortfolio(text)
 		li
 			a(href='/portfolio.html') Портфолио
 		li=text
-	h1.h1-port=text
+	h1=text
 
 mixin portfolioPage(href, scr, name)
 	.col-md-4.col-sm-6.portfolio-item

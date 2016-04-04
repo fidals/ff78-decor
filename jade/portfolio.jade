@@ -3,7 +3,11 @@ extend _template
 block title
 	title Портфолио
 block content
-	+breadcrumb('Портфолио')
+	ol.breadcrumb.custom-breadcrumb
+		li
+			a(href='/index.html') Главная
+		li Портфолио
+	h1.hide Портфолио
 	.content
 		.row
 			h2.portfolio-h2 Декор и флористика
@@ -24,7 +28,7 @@ block content
 			.button-more
 				a.button-more-link#buttonMore  Показать еще
 		.row
-			h2.portfolio-h2 Флористика
+			h2.portfolio-h2 Букеты
 			.portfolio-preview
 				+portfolioPage ('portfolio/anna-leonid.html', 'img/portfolio/mini/anna-leonid/1.jpg', 'Анна и Леонид')
 				+portfolioPage ('portfolio/victoriya-maksim.html', 'img/portfolio/mini/victoriya-maksim/1.jpg', 'Виктория и Максим')

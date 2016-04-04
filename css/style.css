@@ -313,7 +313,6 @@ ul.dropdown-submenu li a {
 }
 
 .portfolio-h2 {
-	border-top: 1px solid #BA55B3;
 	border-bottom: 1px solid #BA55B3;
 	font-size: 24px;
 	margin: 0;
@@ -347,6 +346,11 @@ ul.dropdown-submenu li a {
 	border: 2px solid #BA55B3;
 	color: #BA55B3;
 	text-decoration: none;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1);
+}
+
+.hide {
+	display: none;
 }
 /*/portfolio*/
 
@@ -402,9 +406,21 @@ ul.dropdown-submenu li a {
 /*/faq*/
 
 /*review*/
+/*
+.review-block {
+	clear: both;
+	overflow: hidden;
+}
+*/
+
 .review-img {
 	float: left;
 	margin: 5px 30px 15px 0;
+}
+
+.review-text {
+	float: left;
+	width: 60%;
 }
 
 .author {
@@ -412,9 +428,7 @@ ul.dropdown-submenu li a {
 	font-size: 18px;
 	font-weight: 500;
 	padding-bottom: 10px;
-	text-align: center;
 }
-
 /*review*/
 
 /*footer*/
