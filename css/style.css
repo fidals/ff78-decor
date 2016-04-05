@@ -13,17 +13,19 @@ body {
 }
 
 h1 {
+	font-size: 30px;
 	margin: 10px 0 30px;
 	text-align: center;
 }
 
 h2 {
-	font-size: 18px;
+	font-size: 22px;
 	font-weight: 500;
+	margin: 0 0 30px;
 	text-align: center;
 }
 
-.content .portfolio-item a.h2-link {
+a.h2-link {
 	font-size: 20px;
 }
 
@@ -63,6 +65,7 @@ header .contacts {
 	margin-right: 10px;
 }
 /*-----------------------------------------*/
+
 .social-icon {
 	background: url(../img/spritesheet.png) no-repeat;
 	display: inline-block; /*back display:block when get button.callback*/
@@ -87,9 +90,9 @@ header .contacts {
 	max-height: 50px;
 	max-width: 140px;
 	padding: 0 10px;
-	text-transform: uppercase;
 	text-decoration: none;
 	text-shadow: 0 1px 0 #3d768a;
+	text-transform: uppercase;
 	vertical-align: top;
 }
 
@@ -112,8 +115,8 @@ header .contacts {
 
 .callback span {
 	display: inline-block;
-	text-align: center;
 	margin-top: 5px;
+	text-align: center;
 	vertical-align: top;
 	width: 68px;
 }
@@ -162,15 +165,15 @@ ul.dropdown-submenu li a {
 
 .foto-preview {
 	border-radius: 7%;
-	overflow: hidden;
 	margin: 0 auto;
 	max-height: 250px;
 	max-width: 270px;
+	overflow: hidden;
 }
 
 .recent-content {
-	min-height: 40px;
 	line-height: 18px;
+	min-height: 40px;
 	padding: 1px 0 0 0;
 }
 
@@ -183,7 +186,7 @@ ul.dropdown-submenu li a {
 	text-align: center;
 }
 
-.phone:visited, .phone:hover, .h2-link:hover {
+.phone:visited, .phone:hover, .h2-link:hover, .h3-caption-foto a:hover {
 	color: #BA55B3;
 	text-decoration: none;
 }
@@ -211,8 +214,8 @@ ul.dropdown-submenu li a {
 }
 
 .reasons li {
-	font-size: 16px;
 	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
 	padding: 5px 0;
 }
 
@@ -249,15 +252,15 @@ ul.dropdown-submenu li a {
 	margin: 0 5px 0;
 	padding-top: 10px;
 	text-align: center;
-	width: 36px;
 	vertical-align: middle;
+	width: 36px;
 }
 
-span.color {
+.color {
 	color: #BA55B3;
 }
 
-span.opacity{
+.opacity{
 	opacity: 0;
 }
 
@@ -267,24 +270,31 @@ span.opacity{
 }
 
 .contacts-page-link:hover {
-	text-decoration: none;
 	color: #BA55B3;
+	text-decoration: none;
 }
 
 .contacts-page {
 	border-bottom: 1px solid #BA55B3;
 	border-top:1px solid #BA55B3;
-	padding: 25px 30px;
 	margin: 25px 0 295px;
+	padding: 25px 30px;
 }
 /*contacts*/
 
 /*portfolio*/
 .portfolio-preview {
-	padding: 0 0 10px;
+	padding: 40px 0 8px;
+	overflow: hidden;
+}
+
+.video {
+	margin: 0 auto;
+	max-width: 560px;
 }
 
 .img-portfolio {
+	border-radius: 7%;
 	max-height: 175px;
 }
 
@@ -294,12 +304,53 @@ span.opacity{
 
 .custom-breadcrumb {
 	background: none;
-	margin: 10px 0 0 20px;
 	font-size: 14px;
+	margin: 10px 0 0 20px;
 }
 
 .portfolio-mini-photo {
 	max-height: 180px;
+}
+
+.portfolio-h2 {
+	border-bottom: 1px solid #BA55B3;
+	font-size: 24px;
+	margin: 0;
+	padding: 30px 0;
+}
+
+.h3-caption-foto {
+	font-size: 20px;
+	margin: 15px 0 10px;
+	text-align: center;
+}
+
+.button-more-link {
+	background-color: #ffffff;
+	border-radius: 8px;
+	border: 2px solid #3379b7;
+	display: inline-block;
+	cursor: pointer;
+	color: #3379b7;
+	font-size: 16px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #f7f9fa;
+	padding: 5px 13px;
+}
+.button-more {
+	margin: 0 auto 20px;
+	text-align: center;
+}
+
+.button-more-link:hover {
+	border: 2px solid #BA55B3;
+	color: #BA55B3;
+	text-decoration: none;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1);
+}
+
+.hide {
+	display: none;
 }
 /*/portfolio*/
 
@@ -311,12 +362,13 @@ span.opacity{
 
 .list-price {
 	border-bottom: 1px solid #ab53b0;
-	text-align: left;
 	padding: 15px 0;
+	text-align: left;
 }
 
 .list-price li{
-	padding-bottom: 10px;
+	padding-bott
+	om: 10px;
 }
 
 .list-price i {
@@ -326,8 +378,8 @@ span.opacity{
 
 /*faq*/
 .question {
-	font-weight: 600;
 	font-size: 18px;
+	font-weight: 600;
 	letter-spacing: 1px;
 }
 
@@ -335,9 +387,11 @@ span.opacity{
 	padding: 0 10px;
 }
 
-.faq-block {
-	padding: 27px 10px;
+.faq-block, .review-block {
 	border-top:1px solid rgba(171, 83, 176, 0.7);
+	clear: both;
+	overflow: hidden;
+	padding: 27px 10px;
 }
 
 .faq-block:last-child {
@@ -346,18 +400,44 @@ span.opacity{
 
 .call-us {
 	border-top:1px solid rgba(171, 83, 176, 0.7);
-	text-align: center;
 	padding: 27px 0 5px;
+	text-align: center;
 }
 /*/faq*/
+
+/*review*/
+/*
+.review-block {
+	clear: both;
+	overflow: hidden;
+}
+*/
+
+.review-img {
+	float: left;
+	margin: 5px 30px 15px 0;
+}
+
+.review-text {
+	float: left;
+	width: 60%;
+}
+
+.author {
+	color: rgba(171, 83, 176, 1);
+	font-size: 18px;
+	font-weight: 500;
+	padding-bottom: 10px;
+}
+/*review*/
 
 /*footer*/
 .footer-block {
 	background-color: rgba(137, 131, 138, 0.2);
 	border-top: 1px solid #BA55B3;
 	min-height: 50px;
-	text-align: center;
 	padding: 10px 20px 10px;
+	text-align: center;
 }
 
 .social-links-footer {
@@ -402,10 +482,6 @@ span.opacity{
 		font-size: 22px;
 	}
 
-	h1 {
-		font-size: 25px;
-	}
-
 	.foto-preview, .img-portfolio, .contacts-social-icon {
 		margin: 0 auto;
 	}
@@ -419,19 +495,15 @@ span.opacity{
 		margin: 0 auto 20px;
 	}
 
-	header.header .contacts {
+	.header .contacts {
 		padding: 10px 0;
-	}
-
-	h2 {
-		text-align: center;
 	}
 
 	.button-social {
 		clear: both;
-		overflow: hidden;
 		margin: 0 auto;
 		max-width: 170px;
+		overflow: hidden;
 	}
 
 	.callback {
@@ -439,8 +511,8 @@ span.opacity{
 	}
 
 	.contacts-page {
-		padding: 15px 0;
 		margin: 10px 0;
+		padding: 15px 0;
 	}
 }
 
