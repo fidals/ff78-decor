@@ -1,9 +1,11 @@
-var gulp = require('gulp');
-var imageResize = require('gulp-image-resize');
-var watermark = require("gulp-watermark");
-var jade = require('gulp-jade')
+var gulp = require('gulp'),
+	imageResize = require('gulp-image-resize'),
+	watermark = require("gulp-watermark"),
+	jade = require('gulp-jade');
 
-gulp.task('imageProcessing', function () {
+
+//IMAGE_PORTFOLIO
+gulp.task('imgPortfolio', function () {
 	gulp.src('img/portfolio/scr-images/*/*.{jpg,JPG}')//resize big images to small
 		.pipe(imageResize({
 			width : 300,
@@ -24,6 +26,20 @@ gulp.task('imageProcessing', function () {
 	);
 });
 
+//IMAGE_REVIEW
+gulp.task('imgReview', function () {
+	gulp.src('img/reviews/scr-images/**/*.{jpg,JPG,jpeg}')//resize big images to small
+		.pipe(imageResize({
+			width : 300,
+			height : 200,
+			crop : true,
+			upscale : false
+		}))
+		.pipe(gulp.dest('img/reviews/mini')
+	);
+});
+
+//JADE
 gulp.task('jade', function() {
 	gulp.src(['jade/*.jade', '!jade/_*.jade']) // Jade
 		.pipe(jade({
@@ -37,11 +53,3 @@ gulp.task('jade', function() {
 		}))
 		.pipe(gulp.dest('portfolio'));
 });
-
-//gulp.task('watch', function () {
-//	server.listen(35729, function (err) {
-//
-//	gulp.watch('jade/*/*.jade', ['jade']);
-//
-//	});
-
