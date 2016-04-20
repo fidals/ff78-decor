@@ -406,13 +406,6 @@ ul.dropdown-submenu li a {
 /*/faq*/
 
 /*review*/
-/*
-.review-block {
-	clear: both;
-	overflow: hidden;
-}
-*/
-
 .review-img {
 	float: left;
 	margin: 5px 30px 15px 0;
@@ -514,6 +507,29 @@ ul.dropdown-submenu li a {
 		margin: 10px 0;
 		padding: 15px 0;
 	}
+	.review-text {
+		width: 100%;
+	}
+
+	.autor{
+		text-align: center;
+	}
+	.content-review{
+		padding: 0 20px 30px;
+	}
+
+	.faq-block, .review-block{
+		padding: 15px 0;
+	}
+
+	.review-img {
+		float: none;
+		margin: 0;
+	}
+
+	.img-review-item {
+		margin: 5px auto 15px;
+	}
 }
 
 @media screen and (max-width: 991px) and (min-width:767px) {
@@ -542,6 +558,15 @@ ul.dropdown-submenu li a {
 
 	.portfolio-item {
 		margin: 0 auto 20px;
+	}
+	.review-text {
+		width: 100%;
+	}
+	.content-review{
+		padding: 0;
+	}
+	.author {
+		text-align: left;
 	}
 }
 /*/@media*/

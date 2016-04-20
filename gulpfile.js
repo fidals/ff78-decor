@@ -4,6 +4,11 @@ var gulp = require('gulp'),
 	jade = require('gulp-jade');
 
 
+gulp.task('build', function() {
+	gulp.start('jade', 'imgReview', 'imgPortfolio');
+});
+
+
 //IMAGE_PORTFOLIO
 gulp.task('imgPortfolio', function () {
 	gulp.src('img/portfolio/scr-images/*/*.{jpg,JPG}')//resize big images to small
