@@ -16,11 +16,11 @@ $RECYCLE.BIN/
 *.sass-cache
 *.map
 *.html
+*.css
 
-img/portfolio/main
-img/portfolio/mini
-img/reviews/mini
 node_modules
+dist
+.idea
 
 # Windows shortcuts
 *.lnk
