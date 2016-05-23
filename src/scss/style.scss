@@ -458,6 +458,7 @@ ul.dropdown-submenu li a {
 	}
 
 	&-icon-footer {
+		margin: 0;
 		text-align: left;
 
 		li {
@@ -466,6 +467,10 @@ ul.dropdown-submenu li a {
 		}
 	}
 }
+
+	.backlink {
+		font-size: $font-size-base - 3;
+	}
 /*/footer*/
 
 
