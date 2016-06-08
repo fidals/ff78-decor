@@ -1,15 +1,13 @@
 var loadMore = function($) {
-	var perPage = 6; // количество элементов в каждом блоке
-	
-	$('.portfolio-preview').each(function(index, previewBlock){
-		var items = $(previewBlock).find('.portfolio-item'); // все элементы в блоке
-		items.slice(perPage, items.length).hide();
-		$('.button-more').click(function() {
-			var hiddenItems = $(previewBlock).find('.portfolio-item:hidden');
-			hiddenItems.slice(0, perPage).show();
-			if(hiddenItems.length <= perPage) {
-				$(this).hide();
-			}
-		})
-	})
+  var itemsToKeepVisible = 6;
+
+  $('.portfolio-preview').each(function(index, previewBlock) {
+    var items = $(previewBlock).find('.portfolio-item');
+    items.slice(itemsToKeepVisible, items.length).hide();
+  });
+
+  $('.button-more-link').click(function() {
+    var sectionIndex = $(this).data('id');
+    $('.portfolio-preview-' + sectionIndex).find('.portfolio-item').slideDown();
+  })
 }(jQuery);
