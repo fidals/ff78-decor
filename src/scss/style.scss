@@ -320,7 +320,9 @@ ul.dropdown-submenu li a {
 
 .h3-caption-foto {
   font-size: 20px;
-  margin: 15px 0 10px;
+  margin: 10px 0 0;
+  height: 45px;
+  overflow: hidden;
   text-align: center;
 }
 
@@ -341,12 +343,13 @@ ul.dropdown-submenu li a {
     background-color: $color-white;
     border-radius: 8px;
     border: 2px solid $color-button-more;
-    display: inline-block;
     cursor: pointer;
     color: $color-button-more;
+    display: inline-block;
+    padding: 4px 13px 7px;
     text-decoration: none;
     text-shadow: $shadow-button-more;
-    padding: 5px 13px;
+    transition: all 0.3s ease;
   }
 
   &-link:hover {
