@@ -1,4 +1,4 @@
-@import '_variables';
+@import "variables";
 
 body {
   font-family: $font-family-base;
@@ -51,7 +51,7 @@ h2 {
 }
 
 .phone {
-  color: black;
+  color: $color-black;
 
   &-header {
     font-size: $font-size-base + 2;
@@ -61,6 +61,7 @@ h2 {
 .callback {
   background: $bg-gradient-callback;
   background-color: $color-callback-bg;
+  border: 0;
   border-radius: 14px;
   box-shadow: $box-shadow-callback;
   color: $color-white;
@@ -85,6 +86,10 @@ h2 {
     color: $color-white;
   }
 
+  &-success {
+    display: none;
+  }
+
   i {
     display: inline-block;
     font-size: 45px;
@@ -103,18 +108,11 @@ h2 {
 
 .contacts-social-icon {
   display: inline-block;
-
-  // delete this rules when get button.callback
-  li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  // -----------------------------------------
 }
 
 .social-icon {
-  background: url(../img/spritesheet.png) no-repeat;
-  display: inline-block; // back display:block when get button.callback
+  background: url("../img/spritesheet.png") no-repeat;
+  display: block;
   height: 25px;
   margin-bottom: 3px;
   width: 25px;

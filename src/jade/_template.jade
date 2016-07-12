@@ -11,15 +11,19 @@ html
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
+
     block title
+
     block headLinks
       link(rel='icon', type='image/x-icon', href='/img/favicon.ico')
       link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', rel='stylesheet')
       link(href='https://fonts.googleapis.com/css?family=Marmelad&subset=latin,cyrillic', rel='stylesheet')
       link(href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100&subset=latin,cyrillic', rel='stylesheet')
+
     block headStyles
-      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
       link(rel='stylesheet', href='/css/style.min.css')
+
   body
     header.header.container-wrapper
       .container
@@ -38,14 +42,16 @@ html
               li
                 a.phone.phone-header(href='tel:' + phoneLink02) #{phoneNumber02}
             .button-social
-              //-a.callback(href='#')
-              //-i.fa.fa-mobile
-              //-span заказать звонок
+              button.callback(id="callback" data-toggle="modal" data-target="#callback-modal" type="button")
+                i.fa.fa-mobile
+                span заказать звонок
+
               ul.list-unstyled.contacts-social-icon
                 li
                   a.icon-vk.social-icon(href='http://vk.com/flowers_78', target='_blank', title='vkontakte')
                 li
                   a.icon-instagram.social-icon(href='http://instagram.com/flowers_fantasy78/', target='_blank', title='instagram')
+
     a.btn-custom.btn.btn-navbar.visible-xs(data-toggle='collapse', data-target='.navbar-collapse')
       span.glyphicon.glyphicon-menu-hamburger  МЕНЮ
     nav.middle-menu.navbar.navbar-default.navbar-static-top.navbar-collapse.collapse
@@ -105,7 +111,33 @@ html
                 a.icon-instagram.social-icon(href='http://instagram.com/flowers_fantasy78/', target='_blank', title='instagram')
             .backlink
               | Делаем сложные магазины.
-              a(href=' https://fidals.com/pages/projects.html?utm_source=ff78_decor_site&utm_medium=backlink&utm_campaign=backlink_traffic' target='_blank') Fidals.com
+              a(href='https://fidals.com/pages/projects' +
+              '.html?utm_source=ff78_decor_site&utm_medium=backlink&utm_campaign=backlink_traffic', target='_blank') Fidals.com
+
+    #callback-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+            h4#myModalLabel.modal-title Заказать обратный звонок
+          .modal-body
+            form#callback-form
+              .form-group
+                label.control-label(for='recipient-phone') Номер телефона:
+                input#recipient-phone.form-control.js-phone(type='text', name="phone")
+                input(type='hidden' name='_subject' value='Заказ звонка')
+            .text-center.callback-success#callback-text
+              h3 Спасибо за заявку
+              p.callback-text
+                | Мы перезвоним вам по номеру &nbsp;
+                span#user-phone
+          .modal-footer
+            button#cancel-submit.btn.btn-default(type='button', data-dismiss='modal') Закрыть
+            button#approve-submit.btn.btn-primary(type='submit') Отправить
+
     block script
       script(src='https://code.jquery.com/jquery-2.2.0.min.js')
-      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+      script(src='/js/jquery.mask.min.js')
+      script(src='/js/main.min.js')
