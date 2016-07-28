@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var imageResize = require('gulp-image-resize');
 var watermark = require("gulp-watermark");
 var jade = require('gulp-jade');
+var plumber = require('gulp-plumber');
 var imagemin = require('gulp-imagemin');
 var sass = require('gulp-sass');
 var rename = require('gulp-rename');
@@ -70,6 +71,7 @@ gulp.task('jade', function() {
       'src/jade/*.jade',
       '!src/jade/_*.jade'
     ])
+    .pipe(plumber())
     .pipe(jade({pretty: true}))
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload());
@@ -88,6 +90,7 @@ gulp.task('sass', function() {
       'src/scss/**/*.scss',
       '!src/scss/_*.scss'
     ])
+    .pipe(plumber())
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/css'))
