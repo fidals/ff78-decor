@@ -10,29 +10,56 @@ var uglify = require('gulp-uglify');
 var del = require('del');
 var connect = require('gulp-connect');
 var livereload = require('gulp-livereload');
+var runSequence = require('run-sequence');
+var es = require('event-stream');
+
+//**************************************
+// GULP BUILD
+//**************************************
+gulp.task('build', function(callback) {
+  runSequence(
+    'clean',
+    'jade',
+    'sass',
+    'script',
+    'image',
+    'imgPortfolio',
+    'imgReview',
+    callback
+  );
+});
+
+//************************************
+// CLEAN
+//************************************
+gulp.task('clean', function() {
+  return del(['dist/**/*']);
+});
 
 //************************************
 // IMAGE_PORTFOLIO
 //************************************
 gulp.task('imgPortfolio', function() {
-  // resize big images
-  gulp.src('src/img/portfolio/src-images/**/*.{jpg,JPG}')
-    .pipe(imageResize({
-      width: 300,
-      height: 200,
-      crop: true,
-      upscale: false
-    }))
-    .pipe(gulp.dest('dist/img/portfolio/mini'));
+  return es.concat(
+    // resize big images
+    gulp.src('src/img/portfolio/**/*.{jpg,JPG,jpeg}')
+      .pipe(imageResize({
+        width: 300,
+        height: 200,
+        crop: true,
+        upscale: false
+      }))
+      .pipe(gulp.dest('dist/img/portfolio/mini')),
 
-  gulp.src('src/img/portfolio/src-images/**/*.{jpg,JPG}')
     // add watermark to photos
-    .pipe(watermark({
-      image: 'src/img/watermark.png',
-      resize: '50%',
-      gravity: 'South'
-    }))
-    .pipe(gulp.dest('dist/img/portfolio/main'));
+    gulp.src('src/img/portfolio/**/*.{jpg,JPG,jpeg}')
+      .pipe(watermark({
+        image: 'src/img/watermark.png',
+        resize: '50%',
+        gravity: 'South'
+      }))
+      .pipe(gulp.dest('dist/img/portfolio/main'))
+  );
 });
 
 //************************************
@@ -40,7 +67,7 @@ gulp.task('imgPortfolio', function() {
 //************************************
 gulp.task('imgReview', function() {
   // resize big images
-  gulp.src('src/img/reviews/src-images/**/*.{jpg,JPG,jpeg}')
+  gulp.src('src/img/reviews/**/*.{jpg,JPG,jpeg}')
     .pipe(imageResize({
       width: 300,
       height: 200,
@@ -98,13 +125,6 @@ gulp.task('sass', function() {
 });
 
 //************************************
-// CLEAN
-//************************************
-gulp.task('clean', function() {
-  return del(['dist/**/*']);
-});
-
-//************************************
 // GULP CONNECT
 //************************************
 gulp.task('connect', function() {
@@ -134,13 +154,6 @@ gulp.task('watch', function() {
   gulp.watch('src/**/*.jade', ['jade']);
   gulp.watch('src/scss/**/*.scss', ['sass']);
   gulp.watch('src/js/**/*.js', ['script']);
-});
-
-//**************************************
-// GULP BUILD
-//**************************************
-gulp.task('build', ['clean'], function() {
-  gulp.start('jade', 'sass', 'script', 'image', 'imgPortfolio', 'imgReview');
 });
 
 //**************************************

@@ -31,16 +31,19 @@ html
           .col-md-2.col-sm-3
             a.logo-link(href='/', title='На Главную')
               img.logo.img-responsive(src='/img/ff78-pink-logo.png', alt='логотип')
+
           .col-md-7.col-sm-9
             span.caption-top
               | Оформление свадеб
               | и торжественных мероприятий
+
           .col-md-3.col-sm-9.contacts
             ul.list-unstyled.contacts-phone
               li
                 a.phone.phone-header(href='tel:' + phoneLink01) #{phoneNumber01}
               li
                 a.phone.phone-header(href='tel:' + phoneLink02) #{phoneNumber02}
+
             .button-social
               button.callback(id="callback" data-toggle="modal" data-target="#callback-modal" type="button")
                 i.fa.fa-mobile
@@ -86,9 +89,11 @@ html
             a(href='/faq.html') Вопрос-ответ
           li
             a(href='/contacts.html') Контакты
+
     section.container-wrapper
       .container
         block content
+
     footer.footer-block.container-wrapper
       .container
         .row
