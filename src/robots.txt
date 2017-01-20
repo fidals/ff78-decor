@@ -1,0 +1,3 @@
+User-agent: *
+Host: http://ff78-decor.ru
+

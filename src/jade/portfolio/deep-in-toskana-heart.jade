@@ -1,0 +1,35 @@
+extend ../_template
+
+block title
+	title В самом сердце Тосканы
+block prepend headLinks
+	link(href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css', rel='stylesheet')
+block content
+	+breadcrumbPortfolio('В самом сердце Тосканы')
+	.content
+		p
+			|   
+
+		.row.portfolio-preview
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/1.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/1.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/2.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/2.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/3.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/3.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/4.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/4.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/5.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/5.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/6.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/6.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/7.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/7.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/8.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/8.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/9.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/9.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/10.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/10.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/11.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/11.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/12.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/12.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/13.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/13.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/14.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/14.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/15.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/15.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/16.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/16.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/17.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/17.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/18.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/18.jpg')
+			+portfolioItem('../../img/portfolio/main/deep-in-toskana-heart/19.jpg', '../../img/portfolio/mini/deep-in-toskana-heart/19.jpg')
+block append script
+	script(src='/js/fancybox.min.js')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js')
