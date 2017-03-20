@@ -16,17 +16,17 @@ var es = require('event-stream');
 //**************************************
 // GULP BUILD
 //**************************************
-gulp.task('build', function(callback) {
+gulp.task('build', function() {
   runSequence(
-    'clean',
-    'jade',
-    'sass',
-    'script',
+    'clean', [
+      'jade',
+      'sass',
+      'script',
+    ],
     'image',
     'imgPortfolio',
-    'imgReview',
-    callback
-  );
+    'imgReview'
+  )
 });
 
 //************************************

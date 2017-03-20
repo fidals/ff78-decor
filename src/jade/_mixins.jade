@@ -26,3 +26,10 @@ mixin portfolioItem(href, scr)
   .col-md-4.col-sm-6.portfolio-item
     a.fancybox(rel='gallery1', href=href)
       img.img-responsive.img-portfolio(src=scr)
+
+//- Return `portfolioItem` by `count` number:
+//- Example: +portfolioItemLoop(52, 'loft-wedding')
+//- will prints 52 items with `../../img/portfolio/main/loft-wedding/1.jpg` paths.
+mixin portfolioItemLoop(count, name)
+  - for (var i = 1; i <= count; ++i)
+    +portfolioItem('../../img/portfolio/main/' + name + '/' + i + '.jpg', '../../img/portfolio/mini/' + name + '/' + i + '.jpg')

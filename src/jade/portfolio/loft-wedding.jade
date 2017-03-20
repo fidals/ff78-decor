@@ -1,0 +1,21 @@
+extend ../_template
+
+block title
+  title Loft Wedding
+
+block prepend headLinks
+  link(href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css', rel='stylesheet')
+
+block content
+  +breadcrumbPortfolio('Loft Wedding')
+
+  .content
+    p
+      | Изысканная простота: свадьба в стиле лофт. Данный стиль с каждым свадебным сезоном пользуется всё большей популярностью среди пар, которые устали от стереотипов и условностей. Такой стиль пришёлся по душе Андрею и Валерии — творческим и неординарным личностям. Они не боятся экспериментировать и стремятся к самовыражению.
+
+    .row.portfolio-preview
+      +portfolioItemLoop(52, 'loft-wedding')
+
+block append script
+  script(src='/js/fancybox.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js')
