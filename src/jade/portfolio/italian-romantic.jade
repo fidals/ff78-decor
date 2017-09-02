@@ -1,0 +1,26 @@
+extend ../_template
+
+block title
+	title Итальянская романтика
+block prepend headLinks
+	link(href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css', rel='stylesheet')
+block content
+	+breadcrumbPortfolio('Итальянская романтика')
+	.content
+		p
+			| Лёгкое мерцание пламени свечей, чарующая красота композиций из калл и орхидей, лёгкая свежесть итальянского осеннего ветерка и, конечно же, ни с чем несравнимый вкус Кьянти - именно таким нам запомнился этот прекрасный вечер в самом сердце Италии, в Тоскане. Мы готовы создавать для вас красоту в любой точке мира.
+
+		.row.portfolio-preview
+			+portfolioItem('../../img/portfolio/main/italian-romantic/1.jpg', '../../img/portfolio/mini/italian-romantic/1.jpg')
+			+portfolioItem('../../img/portfolio/main/italian-romantic/2.jpg', '../../img/portfolio/mini/italian-romantic/2.jpg')
+			+portfolioItem('../../img/portfolio/main/italian-romantic/3.jpg', '../../img/portfolio/mini/italian-romantic/3.jpg')
+			+portfolioItem('../../img/portfolio/main/italian-romantic/4.jpg', '../../img/portfolio/mini/italian-romantic/4.jpg')
+			+portfolioItem('../../img/portfolio/main/italian-romantic/5.jpg', '../../img/portfolio/mini/italian-romantic/5.jpg')
+			+portfolioItem('../../img/portfolio/main/italian-romantic/6.jpg', '../../img/portfolio/mini/italian-romantic/6.jpg')
+			+portfolioItem('../../img/portfolio/main/italian-romantic/7.jpg', '../../img/portfolio/mini/italian-romantic/7.jpg')
+			+portfolioItem('../../img/portfolio/main/italian-romantic/8.jpg', '../../img/portfolio/mini/italian-romantic/8.jpg')
+			+portfolioItem('../../img/portfolio/main/italian-romantic/9.jpg', '../../img/portfolio/mini/italian-romantic/9.jpg')
+			+portfolioItem('../../img/portfolio/main/italian-romantic/10.jpg', '../../img/portfolio/mini/italian-romantic/10.jpg')
+block append script
+	script(src='/js/fancybox.min.js')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js')
