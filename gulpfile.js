@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var imageResize = require('gulp-image-resize');
-var watermark = require("gulp-watermark");
-var jade = require('gulp-jade');
+var watermark = require('gulp-watermark');
+var pug = require('gulp-pug');
 var plumber = require('gulp-plumber');
 var imagemin = require('gulp-imagemin');
 var sass = require('gulp-sass');
@@ -19,7 +19,7 @@ var es = require('event-stream');
 gulp.task('build', function() {
   runSequence(
     'clean', [
-      'jade',
+      'pug',
       'sass',
       'script',
     ],
@@ -91,20 +91,20 @@ gulp.task('image', function() {
 });
 
 //************************************
-// GULP JADE
+// GULP PUG
 //************************************
-gulp.task('jade', function() {
+gulp.task('pug', function() {
   gulp.src([
-      'src/jade/*.jade',
-      '!src/jade/_*.jade'
+      'src/pug/*.pug',
+      '!src/pug/_*.pug'
     ])
     .pipe(plumber())
-    .pipe(jade({pretty: true}))
+    .pipe(pug({pretty: true}))
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload());
 
-  gulp.src('src/jade/portfolio/*.jade')
-    .pipe(jade({pretty: true}))
+  gulp.src('src/pug/portfolio/*.pug')
+    .pipe(pug({pretty: true}))
     .pipe(gulp.dest('dist/portfolio'))
     .pipe(connect.reload());
 });
@@ -151,7 +151,7 @@ gulp.task('script', function() {
 // GULP WATCH
 //**************************************
 gulp.task('watch', function() {
-  gulp.watch('src/**/*.jade', ['jade']);
+  gulp.watch('src/**/*.pug', ['pug']);
   gulp.watch('src/scss/**/*.scss', ['sass']);
   gulp.watch('src/js/**/*.js', ['script']);
 });
