@@ -1,0 +1,61 @@
+extends _template
+
+block append vars
+  - var folder = "portfolio";
+  - var folderMini = "portfolio/mini";
+
+block title
+  title Портфолио
+
+block content
+  ol.breadcrumb.custom-breadcrumb
+    li
+      a(href='/index.html') Главная
+    li Портфолио
+
+  h1.hide Портфолио
+
+  .content
+    .row
+      h2.portfolio-h2 Декор и флористика
+      .portfolio-preview.portfolio-preview-01
+        +portfolioPage('portfolio/loft-wedding.html', 'img/portfolio/mini/loft-wedding/39.jpg', 'Loft Wedding')        +portfolioPage('portfolio/lilia-eduardo.html', 'img/portfolio/mini/lilia-eduardo/1.jpg', 'Лилия и Эдуардо')
+        +portfolioPage('portfolio/italian-romantic.html', 'img/portfolio/mini/italian-romantic/1.jpg', 'Итальянская романтика')
+        +portfolioPage('portfolio/deep-in-toskana-heart.html', 'img/portfolio/mini/deep-in-toskana-heart/1.jpg', 'В самом сердце Тосканы')
+        +portfolioPage('portfolio/sea-love-ballada.html', 'img/portfolio/mini/sea-love-ballada/1.jpg', 'Морская история любви')
+        +portfolioPage(folder + '/blue-classic.html', 'img/' + folderMini + '/blue-classic/1.jpeg', 'Классика в ' +
+        'голубом цвете')
+        +portfolioPage(folder + '/lanck.html', 'img/' + folderMini + '/lanck/1.jpeg', 'Корпоратив компании LANCK TELECOM')
+        +portfolioPage('portfolio/ulyana.html', 'img/portfolio/mini/ulyana/1.jpg', 'Флористика для фотосессии Ульяны')
+        +portfolioPage('portfolio/v-stile-rustik.html', 'img/portfolio/mini/v-stile-rustik/1.jpg', 'В стиле Рустик')
+        +portfolioPage('portfolio/morskoy-stil.html', 'img/portfolio/mini/morskoy-stil/2.jpg', 'В морском стиле')
+        +portfolioPage('portfolio/tiffany.html', 'img/portfolio/mini/tiffany/1.jpg', 'В стиле тифани')
+        +portfolioPage('portfolio/persikoviy.html', 'img/portfolio/mini/persikoviy/1.jpg', 'В персиковом цвете')
+        +portfolioPage('portfolio/fioletoviy-glamur.html', 'img/portfolio/mini/fioletoviy-glamur/1.jpg', 'Фиолетовый ' +
+        'гламур')
+        +portfolioPage('portfolio/nataliya-roman.html', 'img/portfolio/mini/nataliya-roman/1.jpg', 'Классическая ' +
+        'свадьба Натальи и Романа')
+        +portfolioPage('portfolio/katerina-marat.html', 'img/portfolio/mini/katerina-marat/4.jpg', 'Свадьба Катерины ' +
+        'и Марата в цвете марсала')
+        +portfolioPage('portfolio/klassik-beliy-cvet.html', 'img/portfolio/mini/klassik-beliy-cvet/1.jpg', 'В ' +
+        'классическом белом цвете')
+        +portfolioPage ('portfolio/promoakciya-dior.html', 'img/portfolio/mini/promoakciya-dior/1.jpg', 'Промоакция от Dior')
+        +portfolioPage ('portfolio/byket-nevest.html', 'img/portfolio/mini/byket-nevest/4.jpg', 'Букеты невест')
+        +portfolioPage ('portfolio/byket-kristiny.html', 'img/portfolio/mini/byket-kristiny/1.jpg', 'Букет и венок на голову для Кристины')
+
+    .row
+      .button-more
+        span.button-more-link(data-id='01') Показать еще
+
+    .row
+      h2.portfolio-h2 Видео
+      .portfolio-preview
+        .video
+          iframe(width='560', height='315', src='https://www.youtube.com/embed/arJE_lP9IL0', frameborder='0', allowfullscreen)
+
+      .portfolio-preview
+        .video
+          iframe(width='560', height='315', src='https://www.youtube.com/embed/jc5oz2iJM0w', frameborder='0', allowfullscreen)
+
+block append script
+  script(src='/js/loadMore.min.js')
