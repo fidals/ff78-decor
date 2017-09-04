@@ -61,8 +61,6 @@ html
     nav.middle-menu.navbar.navbar-default.navbar-static-top.navbar-collapse.collapse
       .container.container-wrapper.menu
         ul.nav.nav-justified.menu-justified
-          li
-            a(href='/') Главная
           li#dropdown-services.dropdown
             a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
               | Услуги
@@ -80,6 +78,13 @@ html
                 a(href='/poligrafiya.html') Полиграфия
               li
                 a(href='/oformlenie-sharami.html') Оформление шарами
+          li#dropdown-services.dropdown
+            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+              | Статьи
+              span.caret.hidden-xs
+            ul#submenu-services.dropdown-menu.hidden-xs.dropdown-submenu
+              li
+                a(href='/merry-registration-to-go.html') Выездная регистрация брака
           li
             a(href='/price.html') Прайс
           li
